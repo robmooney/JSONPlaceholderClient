@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E26EB8B01F879520001B93D1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8AF1F879520001B93D1 /* Address.swift */; };
+		E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8B11F87961A001B93D1 /* AddressTests.swift */; };
 		E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A1681F87905E00C64A0D /* AppDelegate.swift */; };
 		E2C2A16B1F87905E00C64A0D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A16A1F87905E00C64A0D /* MasterViewController.swift */; };
 		E2C2A16D1F87905E00C64A0D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A16C1F87905E00C64A0D /* DetailViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E26EB8AF1F879520001B93D1 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		E26EB8B11F87961A001B93D1 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
 		E2C2A1651F87905E00C64A0D /* JSONPlaceholderClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholderClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2A1681F87905E00C64A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C2A16A1F87905E00C64A0D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				E2C2A17F1F87905E00C64A0D /* JSONPlaceholderClientTests.swift */,
 				E2C2A1811F87905E00C64A0D /* Info.plist */,
 				E2C2A1981F87909F00C64A0D /* UserTests.swift */,
+				E26EB8B11F87961A001B93D1 /* AddressTests.swift */,
 			);
 			path = JSONPlaceholderClientTests;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				E2C2A1991F87909F00C64A0D /* UserTests.swift in Sources */,
 				E2C2A1801F87905E00C64A0D /* JSONPlaceholderClientTests.swift in Sources */,
+				E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

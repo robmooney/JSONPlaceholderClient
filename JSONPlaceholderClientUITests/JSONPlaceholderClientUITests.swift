@@ -6,9 +6,4 @@
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-import XCTest
 
-class JSONPlaceholderClientUITests: XCTestCase {
-        
-  
-}

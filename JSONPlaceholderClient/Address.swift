@@ -8,4 +8,15 @@
 
 struct Address {
     var city: String?
+    var street: String?
+    var suite: String?
+    var zipcode: String?
+}
+
+extension Address: CustomStringConvertible {
+    
+    var description: String {
+        return [city, street, suite, zipcode].flatMap { $0 } .joined(separator: "\n")
+    }
+    
 }
