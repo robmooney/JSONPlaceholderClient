@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		E26EB8B01F879520001B93D1 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8AF1F879520001B93D1 /* Address.swift */; };
 		E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8B11F87961A001B93D1 /* AddressTests.swift */; };
+		E26EB8B61F87A30A001B93D1 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8B51F87A30A001B93D1 /* UsersTableViewController.swift */; };
+		E26EB8B81F87A62F001B93D1 /* JSONPlaceholderAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8B71F87A62F001B93D1 /* JSONPlaceholderAPITests.swift */; };
+		E26EB8BA1F87AE26001B93D1 /* JSONPlaceholderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8B91F87AE26001B93D1 /* JSONPlaceholderAPI.swift */; };
+		E26EB8BC1F87AF52001B93D1 /* UsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BB1F87AF52001B93D1 /* UsersRequest.swift */; };
+		E26EB8BE1F87AFB8001B93D1 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */; };
+		E26EB8C01F87B261001B93D1 /* MockUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BF1F87B261001B93D1 /* MockUsersRequest.swift */; };
 		E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A1681F87905E00C64A0D /* AppDelegate.swift */; };
-		E2C2A16B1F87905E00C64A0D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A16A1F87905E00C64A0D /* MasterViewController.swift */; };
-		E2C2A16D1F87905E00C64A0D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A16C1F87905E00C64A0D /* DetailViewController.swift */; };
 		E2C2A1701F87905E00C64A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A16E1F87905E00C64A0D /* Main.storyboard */; };
 		E2C2A1721F87905E00C64A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A1711F87905E00C64A0D /* Assets.xcassets */; };
 		E2C2A1751F87905E00C64A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A1731F87905E00C64A0D /* LaunchScreen.storyboard */; };
-		E2C2A1801F87905E00C64A0D /* JSONPlaceholderClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A17F1F87905E00C64A0D /* JSONPlaceholderClientTests.swift */; };
 		E2C2A18B1F87905E00C64A0D /* JSONPlaceholderClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A18A1F87905E00C64A0D /* JSONPlaceholderClientUITests.swift */; };
 		E2C2A1991F87909F00C64A0D /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A1981F87909F00C64A0D /* UserTests.swift */; };
 		E2C2A19B1F87916700C64A0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A19A1F87916700C64A0D /* User.swift */; };
@@ -41,16 +44,19 @@
 /* Begin PBXFileReference section */
 		E26EB8AF1F879520001B93D1 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		E26EB8B11F87961A001B93D1 /* AddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTests.swift; sourceTree = "<group>"; };
+		E26EB8B51F87A30A001B93D1 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		E26EB8B71F87A62F001B93D1 /* JSONPlaceholderAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderAPITests.swift; sourceTree = "<group>"; };
+		E26EB8B91F87AE26001B93D1 /* JSONPlaceholderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderAPI.swift; sourceTree = "<group>"; };
+		E26EB8BB1F87AF52001B93D1 /* UsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequest.swift; sourceTree = "<group>"; };
+		E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
+		E26EB8BF1F87B261001B93D1 /* MockUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersRequest.swift; sourceTree = "<group>"; };
 		E2C2A1651F87905E00C64A0D /* JSONPlaceholderClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholderClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2A1681F87905E00C64A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2C2A16A1F87905E00C64A0D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		E2C2A16C1F87905E00C64A0D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E2C2A16F1F87905E00C64A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2C2A1711F87905E00C64A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2C2A1741F87905E00C64A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2C2A1761F87905E00C64A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2C2A17B1F87905E00C64A0D /* JSONPlaceholderClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPlaceholderClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2C2A17F1F87905E00C64A0D /* JSONPlaceholderClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderClientTests.swift; sourceTree = "<group>"; };
 		E2C2A1811F87905E00C64A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2C2A1861F87905E00C64A0D /* JSONPlaceholderClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPlaceholderClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2A18A1F87905E00C64A0D /* JSONPlaceholderClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderClientUITests.swift; sourceTree = "<group>"; };
@@ -108,14 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				E2C2A1681F87905E00C64A0D /* AppDelegate.swift */,
-				E2C2A16A1F87905E00C64A0D /* MasterViewController.swift */,
-				E2C2A16C1F87905E00C64A0D /* DetailViewController.swift */,
 				E2C2A16E1F87905E00C64A0D /* Main.storyboard */,
 				E2C2A1711F87905E00C64A0D /* Assets.xcassets */,
 				E2C2A1731F87905E00C64A0D /* LaunchScreen.storyboard */,
 				E2C2A1761F87905E00C64A0D /* Info.plist */,
 				E2C2A19A1F87916700C64A0D /* User.swift */,
 				E26EB8AF1F879520001B93D1 /* Address.swift */,
+				E26EB8B51F87A30A001B93D1 /* UsersTableViewController.swift */,
+				E26EB8B91F87AE26001B93D1 /* JSONPlaceholderAPI.swift */,
+				E26EB8BB1F87AF52001B93D1 /* UsersRequest.swift */,
 			);
 			path = JSONPlaceholderClient;
 			sourceTree = "<group>";
@@ -123,10 +130,12 @@
 		E2C2A17E1F87905E00C64A0D /* JSONPlaceholderClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				E2C2A17F1F87905E00C64A0D /* JSONPlaceholderClientTests.swift */,
 				E2C2A1811F87905E00C64A0D /* Info.plist */,
 				E2C2A1981F87909F00C64A0D /* UserTests.swift */,
 				E26EB8B11F87961A001B93D1 /* AddressTests.swift */,
+				E26EB8B71F87A62F001B93D1 /* JSONPlaceholderAPITests.swift */,
+				E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */,
+				E26EB8BF1F87B261001B93D1 /* MockUsersRequest.swift */,
 			);
 			path = JSONPlaceholderClientTests;
 			sourceTree = "<group>";
@@ -275,9 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C2A19B1F87916700C64A0D /* User.swift in Sources */,
-				E2C2A16D1F87905E00C64A0D /* DetailViewController.swift in Sources */,
-				E2C2A16B1F87905E00C64A0D /* MasterViewController.swift in Sources */,
+				E26EB8B61F87A30A001B93D1 /* UsersTableViewController.swift in Sources */,
+				E26EB8BA1F87AE26001B93D1 /* JSONPlaceholderAPI.swift in Sources */,
 				E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */,
+				E26EB8BC1F87AF52001B93D1 /* UsersRequest.swift in Sources */,
 				E26EB8B01F879520001B93D1 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26EB8C01F87B261001B93D1 /* MockUsersRequest.swift in Sources */,
 				E2C2A1991F87909F00C64A0D /* UserTests.swift in Sources */,
-				E2C2A1801F87905E00C64A0D /* JSONPlaceholderClientTests.swift in Sources */,
+				E26EB8B81F87A62F001B93D1 /* JSONPlaceholderAPITests.swift in Sources */,
 				E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */,
+				E26EB8BE1F87AFB8001B93D1 /* UsersRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
