@@ -6,7 +6,7 @@
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-struct User {
+struct User: Decodable {
     var name: String?
     var username: String?
     var email: String?

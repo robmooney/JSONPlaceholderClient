@@ -6,7 +6,7 @@
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-struct Address {
+struct Address: Decodable {
     var city: String?
     var street: String?
     var suite: String?
@@ -14,9 +14,7 @@ struct Address {
 }
 
 extension Address: CustomStringConvertible {
-    
     var description: String {
         return [city, street, suite, zipcode].flatMap { $0 } .joined(separator: "\n")
     }
-    
 }

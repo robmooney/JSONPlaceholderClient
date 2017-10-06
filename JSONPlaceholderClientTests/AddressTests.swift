@@ -60,4 +60,27 @@ class AddressTests: XCTestCase {
         XCTAssertEqual("\(address!)", description)
     }
     
+    func testAddress_FromJSON() {
+        let JSON = """
+            {
+                "city": "Gwenborough",
+                "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                },
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "zipcode": "92998-3874"
+            }
+            """.data(using: .utf8)!
+        
+        let decoder = JSONDecoder()
+        address = try! decoder.decode(Address.self, from: JSON)
+
+        XCTAssertEqual(address.city, "Gwenborough")
+        XCTAssertEqual(address.street, "Kulas Light")
+        XCTAssertEqual(address.suite, "Apt. 556")
+        XCTAssertEqual(address.zipcode, "92998-3874")
+    }
+    
 }
