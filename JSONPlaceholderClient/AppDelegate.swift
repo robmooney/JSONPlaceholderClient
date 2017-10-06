@@ -14,7 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let endpoint = URL(string: "https://jsonplaceholder.typicode.com")!
+        
+        let api = HTTPJSONPlaceholderAPI(endpoint: endpoint)
+        
+        let navigationController = window?.rootViewController as? UINavigationController
+        let usersTableViewController = navigationController?.topViewController as? UsersTableViewController
+        
+        usersTableViewController?.api = api
+        
         return true
     }
 

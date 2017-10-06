@@ -16,7 +16,7 @@ class JSONPlaceholderAPITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        api = JSONPlaceholderAPI()
+        api = MockJSONPlaceholderAPI()
     }
     
     override func tearDown() {
@@ -25,10 +25,39 @@ class JSONPlaceholderAPITests: XCTestCase {
     }
     
     func testJSONPlaceholderAPI_UsersRequest() {
+        let expectation = XCTestExpectation(description: "API users request succeeded")
         
         let usersRequest = api.makeUsersRequest()
         
-        XCTAssertNotNil(usersRequest)
+        usersRequest.completion = { users, error in
+            XCTAssertNil(error)
+            XCTAssertEqual(users?.count, 1)
+            
+            expectation.fulfill()
+        }
+        
+        usersRequest.resume()
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testHTTPJSONPlaceholderAPI_UsersRequest() {
+        let expectation = XCTestExpectation(description: "API users request succeeded")
+        
+        api = HTTPJSONPlaceholderAPI(endpoint: URL(string: "https://jsonplaceholder.typicode.com")!)
+        
+        let usersRequest = api.makeUsersRequest()
+        
+        usersRequest.completion = { users, error in
+            XCTAssertNil(error)
+            XCTAssertGreaterThan(users?.count ?? 0, 0)
+            
+            expectation.fulfill()
+        }
+        
+        usersRequest.resume()
+        
+        wait(for: [expectation], timeout: 10.0)
     }
     
 }

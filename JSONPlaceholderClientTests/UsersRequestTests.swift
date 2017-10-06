@@ -16,7 +16,7 @@ class UsersRequestTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        usersRequest = MockUsersRequest(url: URL(string: "https://example.com")!)
+        usersRequest = MockUsersRequest()
     }
     
     override func tearDown() {
@@ -24,24 +24,20 @@ class UsersRequestTests: XCTestCase {
         super.tearDown()
     }
     
-    func testUserRequest_URL() {
-        XCTAssertEqual(usersRequest.url, URL(string: "https://example.com"))
-    }
-    
-    func testUserRequest_Completion() {
+    func testUsersRequest_Completion() {
         usersRequest.completion = { users, error in }
         XCTAssertNotNil(usersRequest.completion)
     }
     
-    func testUserRequest_Resume() {
+    func testUsersRequest_Resume() {
         XCTAssertNotNil(usersRequest.resume)
     }
     
-    func testUserRequest_Cancel() {
+    func testUsersRequest_Cancel() {
         XCTAssertNotNil(usersRequest.cancel)
     }
     
-    func testUserRequest_Success() {
+    func testUsersRequest_Success() {
         let expectation = XCTestExpectation(description: "Users requested sucessfully")
         
         usersRequest.completion = { users, error in
@@ -56,10 +52,10 @@ class UsersRequestTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    func testUserRequest_Fail() {
-        let expectation = XCTestExpectation(description: "Users requested failed")
+    func testUsersRequest_Fail() {
+        let expectation = XCTestExpectation(description: "Users request failed")
         
-        (usersRequest as? MockUsersRequest)?.shouldFail = true
+        usersRequest = MockUsersRequest(shouldFail: true)
         
         usersRequest.completion = { users, error in
             XCTAssertNotNil(error)
@@ -73,8 +69,8 @@ class UsersRequestTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    func testUserRequest_Cancelled() {
-        let expectation = XCTestExpectation(description: "Users requested failed")
+    func testUsersRequest_Cancelled() {
+        let expectation = XCTestExpectation(description: "Users request cancelled")
         
         usersRequest.completion = { users, error in
             XCTAssertNotNil(error)

@@ -10,13 +10,7 @@ import Foundation
 
 class UsersRequest {
     
-    let url: URL
-    
     var completion: (([User]?, Error?) -> ())?
-    
-    init(url: URL) {
-        self.url = url
-    }
     
     func resume() { }
     

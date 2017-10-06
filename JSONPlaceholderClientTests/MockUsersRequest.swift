@@ -15,15 +15,24 @@ class MockUsersRequest: UsersRequest {
         case error
     }
     
-    var shouldFail = false
-    var isCancelled = false
+    private var shouldFail: Bool
+    private var isCancelled = false
+    
+    init(shouldFail: Bool = false) {
+        self.shouldFail = shouldFail
+    }
     
     override func resume() {
         DispatchQueue.global().async {
             if self.shouldFail || self.isCancelled {
                 self.completion?(nil, MockError.error)
             } else {
-                self.completion?([], nil)
+                var user = User()
+                user.name = "Leanne Graham"
+                user.username = "Bret"
+                user.email = "Sincere@april.biz"
+                user.address = Address()
+                self.completion?([user], nil)
             }
         }
     }

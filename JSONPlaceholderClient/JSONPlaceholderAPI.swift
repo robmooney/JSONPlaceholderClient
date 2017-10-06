@@ -11,6 +11,6 @@ import Foundation
 class JSONPlaceholderAPI {
     
     func makeUsersRequest() -> UsersRequest {
-        return UsersRequest(url: URL(string: "https://example.com")!)
+        return UsersRequest()
     }
 }
