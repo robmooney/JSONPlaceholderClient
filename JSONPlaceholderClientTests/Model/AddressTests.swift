@@ -51,9 +51,9 @@ class AddressTests: XCTestCase {
         address.zipcode = "92998-3874"
         
         let description = """
-            Gwenborough
             Kulas Light
             Apt. 556
+            Gwenborough
             92998-3874
             """
 

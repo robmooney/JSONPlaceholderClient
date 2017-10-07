@@ -7,14 +7,14 @@
 //
 
 struct Address: Decodable {
-    var city: String?
     var street: String?
     var suite: String?
+    var city: String?
     var zipcode: String?
 }
 
 extension Address: CustomStringConvertible {
     var description: String {
-        return [city, street, suite, zipcode].flatMap { $0 } .joined(separator: "\n")
+        return [street, suite, city, zipcode].flatMap { $0 } .joined(separator: "\n")
     }
 }

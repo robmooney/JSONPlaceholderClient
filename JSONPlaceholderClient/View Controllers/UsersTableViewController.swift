@@ -45,7 +45,7 @@ class UsersTableViewController: UITableViewController {
         let user = users[indexPath.row]
         
         cell.nameLabel?.text = user.name
-        cell.usernameLabel?.text = "@\(user.username ?? "")"
+        cell.usernameLabel?.text = "@\(user.username!)"
         cell.emailButton.setTitle(user.email, for: .normal)
         cell.addressLabel?.text = user.address?.description
 

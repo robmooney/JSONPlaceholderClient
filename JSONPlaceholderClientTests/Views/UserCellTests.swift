@@ -45,7 +45,7 @@ class UserCellTests: XCTestCase {
     }
     
     func testUserCell_HasUsernameLabel() {
-        let expectation = XCTestExpectation(description: "User cell has name label")
+        let expectation = XCTestExpectation(description: "User cell has username label")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let cell = self.firstCell()
@@ -57,8 +57,8 @@ class UserCellTests: XCTestCase {
         wait(for: [expectation], timeout: 10)
     }
     
-    func testUserCell_HasEmailLabel() {
-        let expectation = XCTestExpectation(description: "User cell has name label")
+    func testUserCell_HasEmailButton() {
+        let expectation = XCTestExpectation(description: "User cell has email button")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let cell = self.firstCell()
@@ -71,12 +71,18 @@ class UserCellTests: XCTestCase {
     }
     
     func testUserCell_HasAddressLabel() {
-        let expectation = XCTestExpectation(description: "User cell has name label")
+        let expectation = XCTestExpectation(description: "User cell has address label")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let cell = self.firstCell()
             XCTAssertNotNil(cell.addressLabel)
-            XCTAssertEqual(cell.addressLabel.text, "Gwenborough\nKulas Light\nApt. 556\n92998-3874")
+            let address = """
+                Kulas Light
+                Apt. 556
+                Gwenborough
+                92998-3874
+                """
+            XCTAssertEqual(cell.addressLabel.text, address)
             expectation.fulfill()
         }
         
