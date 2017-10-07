@@ -17,9 +17,9 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usersRequest = api.makeUsersAPIRequest()
+        usersAPIRequest = api.makeUsersAPIRequest()
         
-        usersRequest.completion = { [weak self] users, error in
+        usersAPIRequest.completion = { [weak self] users, error in
             if let users = users {
                 DispatchQueue.main.async {
                     self?.users = users
@@ -28,7 +28,7 @@ class UsersTableViewController: UITableViewController {
             }
         }
         
-        usersRequest.resume()
+        usersAPIRequest.resume()
     }
 
     // MARK: - Table view data source
@@ -42,8 +42,10 @@ class UsersTableViewController: UITableViewController {
 
         let user = users[indexPath.row]
         
-        cell.textLabel?.text = user.name
-        cell.detailTextLabel?.text = user.email
+        cell.nameLabel?.text = user.name
+        cell.usernameLabel?.text = user.username
+        cell.emailLabel?.text = user.email
+        cell.addressLabel?.text = user.address?.description
 
         return cell
     }
@@ -58,6 +60,6 @@ class UsersTableViewController: UITableViewController {
     }
     */
     
-    private var usersRequest: UsersAPIRequest!
+    private var usersAPIRequest: UsersAPIRequest!
 
 }

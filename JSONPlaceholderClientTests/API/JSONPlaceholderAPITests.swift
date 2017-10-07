@@ -38,7 +38,7 @@ class JSONPlaceholderAPITests: XCTestCase {
         
         usersRequest.resume()
         
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 10)
     }
     
     func testHTTPJSONPlaceholderAPI_UsersRequest() {
@@ -57,7 +57,7 @@ class JSONPlaceholderAPITests: XCTestCase {
         
         usersRequest.resume()
         
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 10)
     }
     
 }

@@ -31,7 +31,7 @@ class MockUsersRequest: UsersAPIRequest {
                 user.name = "Leanne Graham"
                 user.username = "Bret"
                 user.email = "Sincere@april.biz"
-                user.address = Address()
+                user.address = Address(city: "Gwenborough", street: "Kulas Light", suite: "Apt. 556", zipcode: "92998-3874")
                 self.completion?([user], nil)
             }
         }
