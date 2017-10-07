@@ -10,14 +10,14 @@ import UIKit
 
 class UsersTableViewController: UITableViewController {
     
-    var api: JSONPlaceholderAPI!
+    var api: API!
     
     var users: [User] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usersRequest = api.makeUsersRequest()
+        usersRequest = api.makeUsersAPIRequest()
         
         usersRequest.completion = { [weak self] users, error in
             if let users = users {
@@ -58,6 +58,6 @@ class UsersTableViewController: UITableViewController {
     }
     */
     
-    private var usersRequest: UsersRequest!
+    private var usersRequest: UsersAPIRequest!
 
 }

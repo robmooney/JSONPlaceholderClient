@@ -9,7 +9,7 @@
 import Foundation
 @testable import JSONPlaceholderClient
 
-class MockUsersRequest: UsersRequest {
+class MockUsersRequest: UsersAPIRequest {
     
     enum MockError: Error {
         case error

@@ -1,5 +1,5 @@
 //
-//  HTTPUsersRequest.swift
+//  URLSessionUsersAPIRequest.swift
 //  JSONPlaceholderClient
 //
 //  Created by Robert Mooney on 06/10/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HTTPUsersRequest: UsersRequest {
+class URLSessionUsersAPIRequest: UsersAPIRequest {
     
     var task: URLSessionDataTask?
     

@@ -11,7 +11,7 @@ import XCTest
 
 class UsersRequestTests: XCTestCase {
     
-    var usersRequest: UsersRequest!
+    var usersRequest: UsersAPIRequest!
     
     override func setUp() {
         super.setUp()

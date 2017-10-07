@@ -1,5 +1,5 @@
 //
-//  HTTPJSONPlaceholderAPI.swift
+//  URLSessionAPI.swift
 //  JSONPlaceholderClient
 //
 //  Created by Robert Mooney on 06/10/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HTTPJSONPlaceholderAPI: JSONPlaceholderAPI {
+class URLSessionAPI: API {
     
     let endpoint: URL
     
@@ -18,8 +18,8 @@ class HTTPJSONPlaceholderAPI: JSONPlaceholderAPI {
         self.session = URLSession(configuration: .default)
     }
     
-    override func makeUsersRequest() -> UsersRequest {
-        let request = HTTPUsersRequest()
+    override func makeUsersAPIRequest() -> UsersAPIRequest {
+        let request = URLSessionUsersAPIRequest()
         
         let usersURL = endpoint.appendingPathComponent("users")
         

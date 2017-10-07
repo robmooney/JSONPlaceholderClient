@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         let endpoint = URL(string: "https://jsonplaceholder.typicode.com")!
         
-        let api = HTTPJSONPlaceholderAPI(endpoint: endpoint)
+        let api = URLSessionAPI(endpoint: endpoint)
         
         let navigationController = window?.rootViewController as? UINavigationController
         let usersTableViewController = navigationController?.topViewController as? UsersTableViewController

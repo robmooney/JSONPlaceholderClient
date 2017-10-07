@@ -11,7 +11,7 @@ import XCTest
 
 class JSONPlaceholderAPITests: XCTestCase {
     
-    var api: JSONPlaceholderAPI!
+    var api: API!
     
     override func setUp() {
         super.setUp()
@@ -27,7 +27,7 @@ class JSONPlaceholderAPITests: XCTestCase {
     func testJSONPlaceholderAPI_UsersRequest() {
         let expectation = XCTestExpectation(description: "API users request succeeded")
         
-        let usersRequest = api.makeUsersRequest()
+        let usersRequest = api.makeUsersAPIRequest()
         
         usersRequest.completion = { users, error in
             XCTAssertNil(error)
@@ -44,9 +44,9 @@ class JSONPlaceholderAPITests: XCTestCase {
     func testHTTPJSONPlaceholderAPI_UsersRequest() {
         let expectation = XCTestExpectation(description: "API users request succeeded")
         
-        api = HTTPJSONPlaceholderAPI(endpoint: URL(string: "https://jsonplaceholder.typicode.com")!)
+        api = URLSessionAPI(endpoint: URL(string: "https://jsonplaceholder.typicode.com")!)
         
-        let usersRequest = api.makeUsersRequest()
+        let usersRequest = api.makeUsersAPIRequest()
         
         usersRequest.completion = { users, error in
             XCTAssertNil(error)

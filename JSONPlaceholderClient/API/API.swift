@@ -1,5 +1,5 @@
 //
-//  UsersRequest.swift
+//  API.swift
 //  JSONPlaceholderClient
 //
 //  Created by Robert Mooney on 06/10/2017.
@@ -8,11 +8,9 @@
 
 import Foundation
 
-class UsersRequest {
+class API {
     
-    var completion: (([User]?, Error?) -> ())?
-    
-    func resume() { }
-    
-    func cancel() { }
+    func makeUsersAPIRequest() -> UsersAPIRequest {
+        return UsersAPIRequest()
+    }
 }

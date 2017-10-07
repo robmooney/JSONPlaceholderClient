@@ -9,9 +9,9 @@
 import Foundation
 @testable import JSONPlaceholderClient
 
-class MockJSONPlaceholderAPI: JSONPlaceholderAPI {
+class MockJSONPlaceholderAPI: API {
     
-    override func makeUsersRequest() -> UsersRequest {
+    override func makeUsersAPIRequest() -> UsersAPIRequest {
         return MockUsersRequest()
     }
 }
