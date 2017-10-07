@@ -17,6 +17,8 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         usersAPIRequest = api.makeUsersAPIRequest()
         
         usersAPIRequest.completion = { [weak self] users, error in
@@ -43,8 +45,8 @@ class UsersTableViewController: UITableViewController {
         let user = users[indexPath.row]
         
         cell.nameLabel?.text = user.name
-        cell.usernameLabel?.text = user.username
-        cell.emailLabel?.text = user.email
+        cell.usernameLabel?.text = "@\(user.username ?? "")"
+        cell.emailButton.setTitle(user.email, for: .normal)
         cell.addressLabel?.text = user.address?.description
 
         return cell

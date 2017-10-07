@@ -50,7 +50,7 @@ class UserCellTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let cell = self.firstCell()
             XCTAssertNotNil(cell.usernameLabel)
-            XCTAssertEqual(cell.usernameLabel.text, "Bret")
+            XCTAssertEqual(cell.usernameLabel.text, "@Bret")
             expectation.fulfill()
         }
         
@@ -62,8 +62,8 @@ class UserCellTests: XCTestCase {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let cell = self.firstCell()
-            XCTAssertNotNil(cell.emailLabel)
-            XCTAssertEqual(cell.emailLabel.text, "Sincere@april.biz")
+            XCTAssertNotNil(cell.emailButton)
+            XCTAssertEqual(cell.emailButton.titleLabel?.text, "Sincere@april.biz")
             expectation.fulfill()
         }
         
