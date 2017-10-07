@@ -17,13 +17,13 @@ class UsersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let usersRequest = api.makeUsersRequest()
+        usersRequest = api.makeUsersRequest()
         
-        usersRequest.completion = { users, error in
+        usersRequest.completion = { [weak self] users, error in
             if let users = users {
                 DispatchQueue.main.async {
-                    self.users = users
-                    self.tableView.reloadData()
+                    self?.users = users
+                    self?.tableView.reloadData()
                 }
             }
         }
@@ -38,7 +38,7 @@ class UsersTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! UserCell
 
         let user = users[indexPath.row]
         
@@ -57,5 +57,7 @@ class UsersTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private var usersRequest: UsersRequest!
 
 }

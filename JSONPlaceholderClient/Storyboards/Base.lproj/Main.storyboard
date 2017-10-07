@@ -11,13 +11,13 @@
         <!--Users-->
         <scene sceneID="tnf-cp-Wwv">
             <objects>
-                <tableViewController id="3VT-Jb-Spd" customClass="UsersTableViewController" customModule="JSONPlaceholderClient" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="usersTableViewController" id="3VT-Jb-Spd" customClass="UsersTableViewController" customModule="JSONPlaceholderClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1z7-Ig-ojP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="Z5F-83-YGe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="Z5F-83-YGe" customClass="UserCell" customModule="JSONPlaceholderClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z5F-83-YGe" id="d68-iw-d6F">

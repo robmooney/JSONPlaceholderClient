@@ -25,6 +25,8 @@
 		E2E97EA41F87C8E600BA73B2 /* MockJSONPlaceholderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E97EA31F87C8E600BA73B2 /* MockJSONPlaceholderAPI.swift */; };
 		E2E97EA81F87EBE100BA73B2 /* HTTPJSONPlaceholderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E97EA71F87EBE100BA73B2 /* HTTPJSONPlaceholderAPI.swift */; };
 		E2E97EAA1F87ED2700BA73B2 /* HTTPUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E97EA91F87ED2700BA73B2 /* HTTPUsersRequest.swift */; };
+		E2E97EB51F88F2B300BA73B2 /* UsersTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E97EB41F88F2B300BA73B2 /* UsersTableViewControllerTests.swift */; };
+		E2E97EB71F88F8EA00BA73B2 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E97EB61F88F8EA00BA73B2 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E2E97EA31F87C8E600BA73B2 /* MockJSONPlaceholderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSONPlaceholderAPI.swift; sourceTree = "<group>"; };
 		E2E97EA71F87EBE100BA73B2 /* HTTPJSONPlaceholderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPJSONPlaceholderAPI.swift; sourceTree = "<group>"; };
 		E2E97EA91F87ED2700BA73B2 /* HTTPUsersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPUsersRequest.swift; sourceTree = "<group>"; };
+		E2E97EB41F88F2B300BA73B2 /* UsersTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewControllerTests.swift; sourceTree = "<group>"; };
+		E2E97EB61F88F8EA00BA73B2 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				E2E97EAC1F87F3C800BA73B2 /* Model */,
 				E2E97EAF1F87F41C00BA73B2 /* View Controllers */,
 				E2E97EAD1F87F3E800BA73B2 /* API */,
+				E2E97EB91F88F9BD00BA73B2 /* Views */,
 			);
 			path = JSONPlaceholderClient;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				E2E97EB31F87F47400BA73B2 /* Mocks */,
 				E2E97EB11F87F45000BA73B2 /* Model */,
 				E2E97EB21F87F46300BA73B2 /* API */,
+				E2E97EB81F88F9AC00BA73B2 /* View Controllers */,
 			);
 			path = JSONPlaceholderClientTests;
 			sourceTree = "<group>";
@@ -220,6 +226,22 @@
 				E2E97EA31F87C8E600BA73B2 /* MockJSONPlaceholderAPI.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E2E97EB81F88F9AC00BA73B2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2E97EB41F88F2B300BA73B2 /* UsersTableViewControllerTests.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E2E97EB91F88F9BD00BA73B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2E97EB61F88F8EA00BA73B2 /* UserCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +383,7 @@
 				E26EB8BA1F87AE26001B93D1 /* JSONPlaceholderAPI.swift in Sources */,
 				E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */,
 				E2E97EAA1F87ED2700BA73B2 /* HTTPUsersRequest.swift in Sources */,
+				E2E97EB71F88F8EA00BA73B2 /* UserCell.swift in Sources */,
 				E26EB8BC1F87AF52001B93D1 /* UsersRequest.swift in Sources */,
 				E2E97EA81F87EBE100BA73B2 /* HTTPJSONPlaceholderAPI.swift in Sources */,
 				E26EB8B01F879520001B93D1 /* Address.swift in Sources */,
@@ -374,6 +397,7 @@
 				E2E97EA41F87C8E600BA73B2 /* MockJSONPlaceholderAPI.swift in Sources */,
 				E26EB8C01F87B261001B93D1 /* MockUsersRequest.swift in Sources */,
 				E2C2A1991F87909F00C64A0D /* UserTests.swift in Sources */,
+				E2E97EB51F88F2B300BA73B2 /* UsersTableViewControllerTests.swift in Sources */,
 				E26EB8B81F87A62F001B93D1 /* JSONPlaceholderAPITests.swift in Sources */,
 				E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */,
 				E26EB8BE1F87AFB8001B93D1 /* UsersRequestTests.swift in Sources */,
