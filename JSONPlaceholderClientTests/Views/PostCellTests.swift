@@ -35,11 +35,6 @@ class PostCellTests: XCTestCase {
         _ = postsTableViewController.view
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func firstCell() -> PostCell {
         return self.postsTableViewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! PostCell
     }

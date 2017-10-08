@@ -18,11 +18,6 @@ class PostTests: XCTestCase {
         post = Post()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testPost_Title() {
         post.title = "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
         XCTAssertEqual(post.title, "sunt aut facere repellat provident occaecati excepturi optio reprehenderit")

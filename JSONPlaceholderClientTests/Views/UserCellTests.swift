@@ -22,11 +22,6 @@ class UserCellTests: XCTestCase {
         _ = usersTableViewController.view
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func firstCell() -> UserCell {
         return self.usersTableViewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! UserCell
     }

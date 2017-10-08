@@ -19,11 +19,6 @@ class AddressTests: XCTestCase {
         address = Address()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testAddress_City() {
         address.city = "Gwenborough"
         XCTAssertEqual(address?.city, "Gwenborough")

@@ -19,11 +19,6 @@ class PostRequestTests: XCTestCase {
         postsRequest = MockPostsAPIRequest()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testPostsRequest_Completion() {
         postsRequest.completion = { posts, error in }
         XCTAssertNotNil(postsRequest.completion)

@@ -19,11 +19,6 @@ class UsersRequestTests: XCTestCase {
         usersRequest = MockUsersAPIRequest()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testUsersRequest_Completion() {
         usersRequest.completion = { users, error in }
         XCTAssertNotNil(usersRequest.completion)

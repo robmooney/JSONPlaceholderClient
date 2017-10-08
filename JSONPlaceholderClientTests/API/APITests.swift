@@ -21,9 +21,14 @@ class APITests: XCTestCase {
         api = MockAPI()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testAPI_UsersRequestNotNil() {
+        api = API()
+        XCTAssertNotNil(api.makeUsersAPIRequest())
+    }
+    
+    func testAPI_PostsRequestNotNil() {
+        api = API()
+        XCTAssertNotNil(api.makePostsAPIRequest(forUser: User()))
     }
     
     func testAPI_UsersRequest() {
