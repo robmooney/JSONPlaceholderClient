@@ -56,8 +56,6 @@ class URLSessionAPI: API {
         
         let postsURL = (postsURLComponents?.url)!
         
-        print(postsURL)
-        
         let task = session.dataTask(with: postsURL) { data, response, error in
             if let error = error {
                 request.error = error
