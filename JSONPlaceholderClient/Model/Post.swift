@@ -7,6 +7,8 @@
 //
 
 struct Post: Decodable {
+    var id: Int = 0
     var title: String?
     var body: String?
+    var userId: Int = 0
 }

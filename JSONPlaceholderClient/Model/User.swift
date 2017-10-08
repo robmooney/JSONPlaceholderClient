@@ -8,7 +8,6 @@
 
 struct User: Decodable {
     var id = 0
-    
     var name: String?
     var username: String?
     var email: String?
