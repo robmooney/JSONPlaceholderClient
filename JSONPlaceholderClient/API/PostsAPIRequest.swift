@@ -6,18 +6,13 @@
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-class PostsAPIRequest {
+class PostsAPIRequest: APIRequest {
     
     var posts: [Post]?
-    var error: Error?
     
     var completion: (([Post]?, Error?) -> ())?
     
-    func resume() { }
-    
-    func cancel() { }
-    
-    func complete() {
+    override func complete() {
         completion?(posts, error)
     }
     

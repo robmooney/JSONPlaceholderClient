@@ -8,18 +8,13 @@
 
 import Foundation
 
-class UsersAPIRequest {
+class UsersAPIRequest: APIRequest {
     
     var users: [User]?
-    var error: Error?
     
     var completion: (([User]?, Error?) -> ())?
     
-    func resume() { }
-    
-    func cancel() { }
-    
-    func complete() {
+    override func complete() {
         completion?(users, error)
     }
     

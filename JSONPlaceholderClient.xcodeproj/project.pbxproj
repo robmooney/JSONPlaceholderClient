@@ -15,6 +15,7 @@
 		E26EB8BC1F87AF52001B93D1 /* UsersAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BB1F87AF52001B93D1 /* UsersAPIRequest.swift */; };
 		E26EB8BE1F87AFB8001B93D1 /* UsersRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */; };
 		E26EB8C01F87B261001B93D1 /* MockUsersAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EB8BF1F87B261001B93D1 /* MockUsersAPIRequest.swift */; };
+		E290514D1F8A678300CC3BF9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E290514C1F8A678300CC3BF9 /* APIRequest.swift */; };
 		E299D28C1F8A45DF00EAA81D /* PostsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */; };
 		E299D28E1F8A467200EAA81D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28D1F8A467200EAA81D /* Post.swift */; };
 		E299D2901F8A48CA00EAA81D /* MockPostsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28F1F8A48CA00EAA81D /* MockPostsAPIRequest.swift */; };
@@ -66,6 +67,7 @@
 		E26EB8BB1F87AF52001B93D1 /* UsersAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPIRequest.swift; sourceTree = "<group>"; };
 		E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRequestTests.swift; sourceTree = "<group>"; };
 		E26EB8BF1F87B261001B93D1 /* MockUsersAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsersAPIRequest.swift; sourceTree = "<group>"; };
+		E290514C1F8A678300CC3BF9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPIRequest.swift; sourceTree = "<group>"; };
 		E299D28D1F8A467200EAA81D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E299D28F1F8A48CA00EAA81D /* MockPostsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsAPIRequest.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				E26EB8B91F87AE26001B93D1 /* API.swift */,
+				E290514C1F8A678300CC3BF9 /* APIRequest.swift */,
 				E26EB8BB1F87AF52001B93D1 /* UsersAPIRequest.swift */,
 				E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */,
 				E2E97EAE1F87F40E00BA73B2 /* URL Session API */,
@@ -432,6 +435,7 @@
 				E2E97EB71F88F8EA00BA73B2 /* UserCell.swift in Sources */,
 				E26EB8BC1F87AF52001B93D1 /* UsersAPIRequest.swift in Sources */,
 				E2E97EA81F87EBE100BA73B2 /* URLSessionAPI.swift in Sources */,
+				E290514D1F8A678300CC3BF9 /* APIRequest.swift in Sources */,
 				E26EB8B01F879520001B93D1 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
