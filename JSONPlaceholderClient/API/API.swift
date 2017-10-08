@@ -13,4 +13,9 @@ class API {
     func makeUsersAPIRequest() -> UsersAPIRequest {
         return UsersAPIRequest()
     }
+    
+    func makePostsAPIRequest(forUser user: User) -> PostsAPIRequest {
+        return PostsAPIRequest()
+    }
+    
 }

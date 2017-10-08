@@ -17,7 +17,7 @@ class UsersTableViewControllerTests: XCTestCase {
         super.setUp()
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         usersTableViewController = storyboard.instantiateViewController(withIdentifier: "usersTableViewController") as! UsersTableViewController
-        usersTableViewController.api = MockJSONPlaceholderAPI()
+        usersTableViewController.api = MockAPI()
         _ = usersTableViewController.view
     }
     

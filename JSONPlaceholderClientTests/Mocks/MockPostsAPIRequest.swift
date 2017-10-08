@@ -1,15 +1,15 @@
 //
-//  MockUsersRequest.swift
+//  MockPostsAPIRequest.swift
 //  JSONPlaceholderClientTests
 //
-//  Created by Robert Mooney on 06/10/2017.
+//  Created by Robert Mooney on 08/10/2017.
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
 import Foundation
 @testable import JSONPlaceholderClient
 
-class MockUsersRequest: UsersAPIRequest {
+class MockPostsAPIRequest: PostsAPIRequest {
     
     enum MockError: Error {
         case error
@@ -25,19 +25,17 @@ class MockUsersRequest: UsersAPIRequest {
     override func resume() {
         DispatchQueue.global().async {
             if self.shouldFail || self.isCancelled {
-                self.completion?(nil, MockError.error)
+                self.error =  MockError.error
             } else {
-                var user = User()
-                user.name = "Leanne Graham"
-                user.username = "Bret"
-                user.email = "Sincere@april.biz"
-                user.address = Address(street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874")
-                self.completion?([user], nil)
+                var post = Post()
+                self.posts = [post]
             }
+            self.complete()
         }
     }
     
     override func cancel() {
         isCancelled = true
     }
+    
 }

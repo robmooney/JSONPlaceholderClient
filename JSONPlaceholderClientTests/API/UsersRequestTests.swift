@@ -16,7 +16,7 @@ class UsersRequestTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        usersRequest = MockUsersRequest()
+        usersRequest = MockUsersAPIRequest()
     }
     
     override func tearDown() {
@@ -55,7 +55,7 @@ class UsersRequestTests: XCTestCase {
     func testUsersRequest_Fail() {
         let expectation = XCTestExpectation(description: "Users request failed")
         
-        usersRequest = MockUsersRequest(shouldFail: true)
+        usersRequest = MockUsersAPIRequest(shouldFail: true)
         
         usersRequest.completion = { users, error in
             XCTAssertNotNil(error)

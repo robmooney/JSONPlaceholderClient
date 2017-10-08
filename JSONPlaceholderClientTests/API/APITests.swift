@@ -1,5 +1,5 @@
 //
-//  JSONPlaceholderAPITests.swift
+//  APITests.swift
 //  JSONPlaceholderClientTests
 //
 //  Created by Robert Mooney on 06/10/2017.
@@ -9,14 +9,14 @@
 import XCTest
 @testable import JSONPlaceholderClient
 
-class JSONPlaceholderAPITests: XCTestCase {
+class APITests: XCTestCase {
     
     var api: API!
     
     override func setUp() {
         super.setUp()
         
-        api = MockJSONPlaceholderAPI()
+        api = MockAPI()
     }
     
     override func tearDown() {
@@ -24,7 +24,7 @@ class JSONPlaceholderAPITests: XCTestCase {
         super.tearDown()
     }
     
-    func testJSONPlaceholderAPI_UsersRequest() {
+    func testAPI_UsersRequest() {
         let expectation = XCTestExpectation(description: "API users request succeeded")
         
         let usersRequest = api.makeUsersAPIRequest()
@@ -41,8 +41,8 @@ class JSONPlaceholderAPITests: XCTestCase {
         wait(for: [expectation], timeout: 10)
     }
     
-    func testHTTPJSONPlaceholderAPI_UsersRequest() {
-        let expectation = XCTestExpectation(description: "API users request succeeded")
+    func testURLSessionAPI_UsersRequest() {
+        let expectation = XCTestExpectation(description: "URL session API users request succeeded")
         
         api = URLSessionAPI(endpoint: URL(string: "https://jsonplaceholder.typicode.com")!)
         
@@ -56,6 +56,29 @@ class JSONPlaceholderAPITests: XCTestCase {
         }
         
         usersRequest.resume()
+        
+        wait(for: [expectation], timeout: 10)
+    }
+    
+    func testAPI_PostsRequest() {
+        let expectation = XCTestExpectation(description: "API posts request succeeded")
+        
+        var user = User()
+        user.name = "Leanne Graham"
+        user.username = "Bret"
+        user.email = "Sincere@april.biz"
+        user.address = Address(street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874")
+        
+        let postsRequest = api.makePostsAPIRequest(forUser: user)
+        
+        postsRequest.completion = { posts, error in
+            XCTAssertNil(error)
+            XCTAssertEqual(posts?.count, 1)
+            
+            expectation.fulfill()
+        }
+        
+        postsRequest.resume()
         
         wait(for: [expectation], timeout: 10)
     }

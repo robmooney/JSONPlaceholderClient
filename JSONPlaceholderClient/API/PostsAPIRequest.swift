@@ -1,26 +1,24 @@
 //
-//  UsersAPIRequest.swift
+//  PostsAPIRequest.swift
 //  JSONPlaceholderClient
 //
-//  Created by Robert Mooney on 06/10/2017.
+//  Created by Robert Mooney on 08/10/2017.
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-import Foundation
-
-class UsersAPIRequest {
+class PostsAPIRequest {
     
-    var users: [User]?
+    var posts: [Post]?
     var error: Error?
     
-    var completion: (([User]?, Error?) -> ())?
+    var completion: (([Post]?, Error?) -> ())?
     
     func resume() { }
     
     func cancel() { }
     
     func complete() {
-        completion?(users, error)
+        completion?(posts, error)
     }
     
 }

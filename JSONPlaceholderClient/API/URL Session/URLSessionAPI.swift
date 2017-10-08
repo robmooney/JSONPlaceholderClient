@@ -25,7 +25,7 @@ class URLSessionAPI: API {
         
         let task = session.dataTask(with: usersURL) { data, response, error in
             if let error = error {
-                request.completion?(nil, error)
+                request.error = error
             }
             
             if let data = data {
@@ -33,11 +33,13 @@ class URLSessionAPI: API {
                 
                 do {
                     let users = try decoder.decode([User].self, from: data)
-                    request.completion?(users, nil)
+                    request.users = users
                 } catch {
-                    request.completion?(nil, error)                    
+                    request.error = error
                 }
             }
+            
+            request.complete()
         }
         
         request.task = task
