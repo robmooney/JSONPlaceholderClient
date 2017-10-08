@@ -12,6 +12,7 @@ class PostsTableViewController: UITableViewController {
 
     var api: API!
     
+    var user: User!
     var posts: [Post] = []
     
     override func viewDidLoad() {
@@ -19,7 +20,9 @@ class PostsTableViewController: UITableViewController {
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        postsAPIRequest = api.makePostsAPIRequest(forUser: User())
+        title = "@\(user.username!)"
+        
+        postsAPIRequest = api.makePostsAPIRequest(forUser: user)
         
         postsAPIRequest.completion = { [weak self] posts, error in
             if let posts = posts {
@@ -41,11 +44,12 @@ class PostsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
 
         let post = posts[indexPath.row]
         
-        cell.textLabel?.text = post.title
+        cell.titleLabel?.text = post.title
+        cell.bodyLabel?.text = post.body
 
         return cell
     }

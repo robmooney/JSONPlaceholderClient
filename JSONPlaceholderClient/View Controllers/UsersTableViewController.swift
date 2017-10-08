@@ -52,15 +52,19 @@ class UsersTableViewController: UITableViewController {
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "userPosts" {
+            let postsTableViewController = segue.destination as! PostsTableViewController
+            postsTableViewController.api = api
+            
+            let index = tableView.indexPathForSelectedRow!.row
+            
+            postsTableViewController.user = users[index]
+        }
     }
-    */
     
     private var usersAPIRequest: UsersAPIRequest!
 

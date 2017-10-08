@@ -1,5 +1,5 @@
 //
-//  PostsTableViewControllerTests.swift
+//  PostCellTests.swift
 //  JSONPlaceholderClientTests
 //
 //  Created by Robert Mooney on 08/10/2017.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import JSONPlaceholderClient
 
-class PostsTableViewControllerTests: XCTestCase {
+class PostCellTests: XCTestCase {
     
     var postsTableViewController: PostsTableViewController!
     
@@ -40,44 +40,34 @@ class PostsTableViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testPostsTableViewController_NumberOfRows() {
-        let expectation = XCTestExpectation(description: "Number of rows is 1")
+    func firstCell() -> PostCell {
+        return self.postsTableViewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! PostCell
+    }
+    
+    func testPostCell_HasTitleLabel() {
+        let expectation = XCTestExpectation(description: "Post cell has title label")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertEqual(self.postsTableViewController.tableView.numberOfRows(inSection: 0), 1)
+            let cell = self.firstCell()
+            XCTAssertNotNil(cell.titleLabel)
+            XCTAssertEqual(cell.titleLabel.text, "sunt aut facere repellat provident occaecati excepturi optio reprehenderit")
             expectation.fulfill()
         }
         
         wait(for: [expectation], timeout: 10)
     }
     
-    func testPostsTableViewController_CellForRow() {
-        let expectation = XCTestExpectation(description: "Cell for row 0 not nil")
+    func testUserCell_HasBodyLabel() {
+        let expectation = XCTestExpectation(description: "Post cell has body label")
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertNotNil(self.postsTableViewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)))
+            let cell = self.firstCell()
+            XCTAssertNotNil(cell.bodyLabel)
+            XCTAssertEqual(cell.bodyLabel.text, "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto")
             expectation.fulfill()
         }
         
         wait(for: [expectation], timeout: 10)
-    }
-    
-    func testPostsTableViewController_CellForRowIsPostCell() {
-        let expectation = XCTestExpectation(description: "Cell for row 0 is post cell")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let cell = self.postsTableViewController.tableView.cellForRow(at: IndexPath(row: 0, section: 0))!
-            XCTAssert(cell is PostCell)
-            expectation.fulfill()
-        }
-        
-        wait(for: [expectation], timeout: 10)
-    }
-    
-    func testPostsTableViewController_Title() {
-        
-        XCTAssertEqual(self.postsTableViewController.title, "@Bret")
-       
     }
     
 }

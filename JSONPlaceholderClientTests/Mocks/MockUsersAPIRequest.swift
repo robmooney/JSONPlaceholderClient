@@ -27,12 +27,18 @@ class MockUsersAPIRequest: UsersAPIRequest {
             if self.shouldFail || self.isCancelled {
                 self.error =  MockError.error
             } else {
-                var user = User()
-                user.id = 1
-                user.name = "Leanne Graham"
-                user.username = "Bret"
-                user.email = "Sincere@april.biz"
-                user.address = Address(street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874")
+                let user = User(
+                    id: 1,
+                    name: "Leanne Graham",
+                    username: "Bret",
+                    email: "Sincere@april.biz",
+                    address: Address(
+                        street: "Kulas Light",
+                        suite: "Apt. 556",
+                        city: "Gwenborough",
+                        zipcode: "92998-3874"
+                    )
+                )
                 self.users = [user]
             }
             self.complete()

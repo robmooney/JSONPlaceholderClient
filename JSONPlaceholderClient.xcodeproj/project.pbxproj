@@ -23,6 +23,8 @@
 		E299D2961F8A556300EAA81D /* PostsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D2951F8A556300EAA81D /* PostsTableViewControllerTests.swift */; };
 		E299D2981F8A55C800EAA81D /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D2971F8A55C800EAA81D /* PostsTableViewController.swift */; };
 		E299D29A1F8A58E800EAA81D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D2991F8A58E800EAA81D /* PostCell.swift */; };
+		E299D29C1F8A5AD300EAA81D /* PostCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D29B1F8A5AD300EAA81D /* PostCellTests.swift */; };
+		E299D29E1F8A610F00EAA81D /* PostRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D29D1F8A610F00EAA81D /* PostRequestTests.swift */; };
 		E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A1681F87905E00C64A0D /* AppDelegate.swift */; };
 		E2C2A1701F87905E00C64A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A16E1F87905E00C64A0D /* Main.storyboard */; };
 		E2C2A1721F87905E00C64A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A1711F87905E00C64A0D /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		E299D2951F8A556300EAA81D /* PostsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		E299D2971F8A55C800EAA81D /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		E299D2991F8A58E800EAA81D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		E299D29B1F8A5AD300EAA81D /* PostCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellTests.swift; sourceTree = "<group>"; };
+		E299D29D1F8A610F00EAA81D /* PostRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestTests.swift; sourceTree = "<group>"; };
 		E2C2A1651F87905E00C64A0D /* JSONPlaceholderClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholderClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2A1681F87905E00C64A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C2A16F1F87905E00C64A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 			children = (
 				E26EB8B71F87A62F001B93D1 /* APITests.swift */,
 				E26EB8BD1F87AFB8001B93D1 /* UsersRequestTests.swift */,
+				E299D29D1F8A610F00EAA81D /* PostRequestTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				E2E97EBA1F88FD0400BA73B2 /* UserCellTests.swift */,
+				E299D29B1F8A5AD300EAA81D /* PostCellTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,11 +443,13 @@
 				E2E97EBB1F88FD0400BA73B2 /* UserCellTests.swift in Sources */,
 				E2E97EA41F87C8E600BA73B2 /* MockAPI.swift in Sources */,
 				E299D2901F8A48CA00EAA81D /* MockPostsAPIRequest.swift in Sources */,
+				E299D29C1F8A5AD300EAA81D /* PostCellTests.swift in Sources */,
 				E26EB8C01F87B261001B93D1 /* MockUsersAPIRequest.swift in Sources */,
 				E2C2A1991F87909F00C64A0D /* UserTests.swift in Sources */,
 				E2E97EB51F88F2B300BA73B2 /* UsersTableViewControllerTests.swift in Sources */,
 				E26EB8B81F87A62F001B93D1 /* APITests.swift in Sources */,
 				E299D2961F8A556300EAA81D /* PostsTableViewControllerTests.swift in Sources */,
+				E299D29E1F8A610F00EAA81D /* PostRequestTests.swift in Sources */,
 				E26EB8B21F87961A001B93D1 /* AddressTests.swift in Sources */,
 				E26EB8BE1F87AFB8001B93D1 /* UsersRequestTests.swift in Sources */,
 				E299D2941F8A537A00EAA81D /* PostTests.swift in Sources */,

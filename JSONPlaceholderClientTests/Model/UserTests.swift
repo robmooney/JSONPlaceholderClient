@@ -16,7 +16,18 @@ class UserTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        user = User()
+        user = User(
+            id: 1,
+            name: "Leanne Graham",
+            username: "Bret",
+            email: "Sincere@april.biz",
+            address: Address(
+                street: "Kulas Light",
+                suite: "Apt. 556",
+                city: "Gwenborough",
+                zipcode: "92998-3874"
+            )
+        )
     }
     
     override func tearDown() {
@@ -25,25 +36,22 @@ class UserTests: XCTestCase {
     }
     
     func testUser_Name() {
-        user.name = "Leanne Graham"
         XCTAssertEqual(user.name, "Leanne Graham")
     }
     
     func testUser_Username() {
-        user.username = "Bret"
         XCTAssertEqual(user.username, "Bret")
     }
     
     func testUser_Email() {
-        user.email = "Sincere@april.biz"
         XCTAssertEqual(user.email, "Sincere@april.biz")
     }
     
     func testUser_Address() {
-        var address = Address()
-        address.city = "Gwenborough"
-        user.address = address
+        XCTAssertEqual(user.address?.street, "Kulas Light")
+        XCTAssertEqual(user.address?.suite, "Apt. 556")
         XCTAssertEqual(user.address?.city, "Gwenborough")
+        XCTAssertEqual(user.address?.zipcode, "92998-3874")
     }
     
     func testUser_FromJSON() {
