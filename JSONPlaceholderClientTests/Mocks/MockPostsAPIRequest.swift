@@ -27,8 +27,7 @@ class MockPostsAPIRequest: PostsAPIRequest {
             if self.shouldFail || self.isCancelled {
                 self.error =  MockError.error
             } else {
-                var post = Post()
-                self.posts = [post]
+                self.posts = [Post()]
             }
             self.complete()
         }
