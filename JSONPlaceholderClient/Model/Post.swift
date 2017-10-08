@@ -6,6 +6,7 @@
 //  Copyright © 2017 Robert Mooney. All rights reserved.
 //
 
-struct Post {
-    
+struct Post: Decodable {
+    var title: String?
+    var body: String?
 }

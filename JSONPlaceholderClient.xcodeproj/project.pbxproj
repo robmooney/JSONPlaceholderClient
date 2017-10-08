@@ -18,6 +18,7 @@
 		E299D28C1F8A45DF00EAA81D /* PostsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */; };
 		E299D28E1F8A467200EAA81D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28D1F8A467200EAA81D /* Post.swift */; };
 		E299D2901F8A48CA00EAA81D /* MockPostsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D28F1F8A48CA00EAA81D /* MockPostsAPIRequest.swift */; };
+		E299D2921F8A4B4600EAA81D /* URLSessionPostsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299D2911F8A4B4600EAA81D /* URLSessionPostsAPIRequest.swift */; };
 		E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2A1681F87905E00C64A0D /* AppDelegate.swift */; };
 		E2C2A1701F87905E00C64A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A16E1F87905E00C64A0D /* Main.storyboard */; };
 		E2C2A1721F87905E00C64A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C2A1711F87905E00C64A0D /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPIRequest.swift; sourceTree = "<group>"; };
 		E299D28D1F8A467200EAA81D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E299D28F1F8A48CA00EAA81D /* MockPostsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsAPIRequest.swift; sourceTree = "<group>"; };
+		E299D2911F8A4B4600EAA81D /* URLSessionPostsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionPostsAPIRequest.swift; sourceTree = "<group>"; };
 		E2C2A1651F87905E00C64A0D /* JSONPlaceholderClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPlaceholderClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C2A1681F87905E00C64A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C2A16F1F87905E00C64A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,8 +182,8 @@
 			children = (
 				E26EB8B91F87AE26001B93D1 /* API.swift */,
 				E26EB8BB1F87AF52001B93D1 /* UsersAPIRequest.swift */,
-				E2E97EAE1F87F40E00BA73B2 /* URL Session */,
 				E299D28B1F8A45DF00EAA81D /* PostsAPIRequest.swift */,
+				E2E97EAE1F87F40E00BA73B2 /* URL Session */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -191,6 +193,7 @@
 			children = (
 				E2E97EA71F87EBE100BA73B2 /* URLSessionAPI.swift */,
 				E2E97EA91F87ED2700BA73B2 /* URLSessionUsersAPIRequest.swift */,
+				E299D2911F8A4B4600EAA81D /* URLSessionPostsAPIRequest.swift */,
 			);
 			path = "URL Session";
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				E26EB8B61F87A30A001B93D1 /* UsersTableViewController.swift in Sources */,
 				E299D28C1F8A45DF00EAA81D /* PostsAPIRequest.swift in Sources */,
 				E26EB8BA1F87AE26001B93D1 /* API.swift in Sources */,
+				E299D2921F8A4B4600EAA81D /* URLSessionPostsAPIRequest.swift in Sources */,
 				E2C2A1691F87905E00C64A0D /* AppDelegate.swift in Sources */,
 				E2E97EAA1F87ED2700BA73B2 /* URLSessionUsersAPIRequest.swift in Sources */,
 				E2E97EB71F88F8EA00BA73B2 /* UserCell.swift in Sources */,

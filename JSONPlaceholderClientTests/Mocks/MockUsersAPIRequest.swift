@@ -28,6 +28,7 @@ class MockUsersAPIRequest: UsersAPIRequest {
                 self.error =  MockError.error
             } else {
                 var user = User()
+                user.id = 1
                 user.name = "Leanne Graham"
                 user.username = "Bret"
                 user.email = "Sincere@april.biz"

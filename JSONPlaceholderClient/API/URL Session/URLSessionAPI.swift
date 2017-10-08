@@ -47,5 +47,40 @@ class URLSessionAPI: API {
         return request
     }
     
+    override func makePostsAPIRequest(forUser user: User) -> PostsAPIRequest {
+        let request = URLSessionPostsAPIRequest()
+        
+        var postsURLComponents = URLComponents(string: endpoint.absoluteString)
+        postsURLComponents?.path = "/posts"
+        postsURLComponents?.queryItems = [URLQueryItem(name: "userId", value: "\(user.id)")]
+        
+        let postsURL = (postsURLComponents?.url)!
+        
+        print(postsURL)
+        
+        let task = session.dataTask(with: postsURL) { data, response, error in
+            if let error = error {
+                request.error = error
+            }
+            
+            if let data = data {
+                let decoder = JSONDecoder()
+                
+                do {
+                    let posts = try decoder.decode([Post].self, from: data)
+                    request.posts = posts
+                } catch {
+                    request.error = error
+                }
+            }
+            
+            request.complete()
+        }
+        
+        request.task = task
+        
+        return request
+    }
+    
     private var session: URLSession
 }

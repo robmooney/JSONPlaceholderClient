@@ -11,6 +11,8 @@ import XCTest
 
 class APITests: XCTestCase {
     
+    let endpoint = "https://jsonplaceholder.typicode.com"
+    
     var api: API!
     
     override func setUp() {
@@ -44,7 +46,7 @@ class APITests: XCTestCase {
     func testURLSessionAPI_UsersRequest() {
         let expectation = XCTestExpectation(description: "URL session API users request succeeded")
         
-        api = URLSessionAPI(endpoint: URL(string: "https://jsonplaceholder.typicode.com")!)
+        api = URLSessionAPI(endpoint: URL(string: endpoint)!)
         
         let usersRequest = api.makeUsersAPIRequest()
         
@@ -63,17 +65,33 @@ class APITests: XCTestCase {
     func testAPI_PostsRequest() {
         let expectation = XCTestExpectation(description: "API posts request succeeded")
         
+        let postsRequest = api.makePostsAPIRequest(forUser: User())
+        
+        postsRequest.completion = { posts, error in
+            XCTAssertNil(error)
+            XCTAssertEqual(posts?.count, 1)
+            
+            expectation.fulfill()
+        }
+        
+        postsRequest.resume()
+        
+        wait(for: [expectation], timeout: 10)
+    }
+    
+    func testURLSessionAPI_PostsRequest() {
+        let expectation = XCTestExpectation(description: "URL session API posts request succeeded")
+        
+        api = URLSessionAPI(endpoint: URL(string: endpoint)!)
+        
         var user = User()
-        user.name = "Leanne Graham"
-        user.username = "Bret"
-        user.email = "Sincere@april.biz"
-        user.address = Address(street: "Kulas Light", suite: "Apt. 556", city: "Gwenborough", zipcode: "92998-3874")
+        user.id = 1
         
         let postsRequest = api.makePostsAPIRequest(forUser: user)
         
         postsRequest.completion = { posts, error in
             XCTAssertNil(error)
-            XCTAssertEqual(posts?.count, 1)
+            XCTAssertEqual(posts?.count, 10)
             
             expectation.fulfill()
         }
